@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">    
+    <title>Hello World!</title>    
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.    
+    <button id="btn-test" type="button">타이틀 변경 버튼</button>
+    <button id="btn-open-file">파일 열기</button>
+    <div>Current value: <strong id="counter">0</strong></div>
+    <div id="drag-test" draggable="true">드래그 테스트</div>
+
+    <script src="./renderer.js"></script> <!-- 렌더러 스크립트의 위치가 header 나 body의 맨 위에 있을땐 동작하지 않았다 -->    
+  </body>
+</html>
